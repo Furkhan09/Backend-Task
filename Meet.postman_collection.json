@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "c68f2aac-8589-409f-91f3-12d7d00f4fd8",
+		"name": "Meet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"student1\",\r\n    \"email\":\"stud1@gmail.com\",\r\n    \"password\":\"student1\",\r\n    \"slot\":\"4pm-5pm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/user/alumni",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2M2E0NTlhYThkMjhjMGRjYzA1ODlkN2EiLCJpYXQiOjE2NzE3MTUyNDIsImV4cCI6MTY3MjE0NzI0Mn0.VdeBO8lTNiLTYAcf1s9DGPU5l45WxqNzLglArVBjntc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"alumni\",\r\n    \"email\":\"kamal@gmail.com\",\r\n    \"password\":\"kamal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/alumni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"alumni"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
